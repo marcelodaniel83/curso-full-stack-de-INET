@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+
+
+body {
+    color: blue;
+}
+
+main {
+    color: purple;
+}
+
+* {
+    color: brown;
+}
+
+h1,h2 {
+    font-family: 'Slabo 27px', serif;
+    color: green;
+}
+
+h1 {
+    color: orange;
+}
+
+section p {
+    color: yellow;
+}
+
+p {
+    color: cyan;
+}
+
+section p:last-child {
+    color: olivedrab;
+}
+
+.texto2 {
+    color: magenta;
+}
+
+.texto {
+    color: gray !important;
+}
+
+#parrafo {
+    color: teal;
+}

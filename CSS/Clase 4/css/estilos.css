@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+}
+
+
+/*
+#caja1 {
+    background-color:red;
+    width: 50%;
+    height: 300px;
+    border: 40px solid magenta;
+    float: left;
+}
+
+#caja2 {
+    background-color:blue;
+    width: 50%;
+    height: 300px;
+    float: left;
+}
+*/
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #888;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    /* space-between; */
+    flex-direction: row;
+    align-items: center;
+}
+
+header #encabezado {
+    /* border: 1px solid red; */
+    width: 30%;
+    padding: 10px;
+    /* float: left; */
+}
+
+header #redes-sociales {
+    /* border: 1px solid yellow; */
+    width: 10%;
+    /* float: right; */
+    margin-top: 20px;
+    margin-left: auto;
+    align-self: flex-start;
+}
+
+#redes-sociales img {
+    width: 40px;
+    height: 40px;
+}
+
+main {
+    width: 100%;
+    background-color: #678;
+    /* height: 200px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section {
+    width: 30%;
+    /* height: 200px; */
+    border: 1px dashed cyan;
+    /* float: left; */
+    padding: 10px;
+}
+
+nav,
+nav div {
+    width: 100%;
+    height: 50px;
+    background-color: lightblue;
+    display: flex;
+    /* flex-inline; */
+    justify-content: center;
+    align-items: center;
+}
+
+nav div {
+    width: 40%;
+    justify-content: space-around
+}
+
+nav a {
+    width: 120px;
+    height: 40px;
+    /* display: block; */
+    background-color: cornflowerblue;
+    /* border: 1px solid magenta; */
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    line-height: 40px;
+    border-radius: 10px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+}
+
+nav a:link,
+nav a:visited {
+    background-color: black;
+    color: white;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+nav a:active {
+    background-color: gray;
+    color: #eee;
+}
+
+section img {
+    width: 70px;
+    height: 70px;
+}
+
+section img:hover {
+    opacity: 0.5;
+}
+
+label,
+input,
+button {
+    display: block;
+}
+
+button {
+    margin-top: 15px;
+}
+
+input {
+    width: 100px;
+}
+
+input:focus {
+    width: 200px;
+}
+
+button:focus {
+    background-color: limegreen;
+}
+
+main section:first-child {
+    background-color: red;
+    color: white;
+    max-height: 300px;
+    max-width: 40%;
+    overflow: auto;
+    resize: both;
+}
+
+main section#contacto:last-child {
+    background-color: blue;
+    color: white;
+    height: 800px;
+}
+
+#contacto {
+    width: 100%;
+    background-color: green;
+}
+
+section p::first-line {
+    color: yellow;
+    font-weight: bold;
+}
+
+section p::first-letter {
+    color: orange;
+    font-size: xx-large;
+}
+
+section p::before {
+    /* content: 'Principio'; */
+    content: url(https://placeimg.com/50/50/1);
+}
+
+section p::after {
+    content: '.';
+    color: magenta;
+    font-size: 40px;
+}
+
+label::after {
+    content: attr(for);
+}
+
+section::before {
+    content: attr(id)
+}
+
+body {
+    counter-reset: titulo;
+}
+
+
+/* section h2::before {
+    content: 'Servicio ' counter(titulo);
+    color: cyan;
+    text-transform: uppercase;
+
+} */
+
+section h2::before {
+    content: 'Servicio ';
+    color: cyan;
+    text-transform: uppercase;
+}
+
+section h2::after {
+    content: counter(titulo, lower-roman);
+    color: orange;
+    /* text-transform: uppercase; */
+    font-size: 40px;
+}
+
+section h2 {
+    counter-increment: titulo;
+}
+
+section ul {
+    /* padding : 0; */
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+section ol {
+    /* list-style-type: hiragana; */
+    /* list-style-image: url(https://placeimg.com/15/15/1); */
+    list-style: upper-roman url(https://placeimg.com/15/15/1);
+}
+
+#encabezado #logo img {
+    width: 100px;
+    height: 50px;
+    /* border: 1px solid magenta; */
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid brown; */
+    overflow: hidden;
+}
+
+textarea {
+    resize: horizontal;
+}
+
+footer {
+    width: 100%;
+    /* height: 100px; */
+    background-color: orange;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* #esqueleto {
+    width: 64px;
+    height: 64px;
+    background-color: red;
+    display: block;
+    background-image: url(../imgs/esqueletos.png);
+    background-position : -512px -192px;
+}
+ */
+
+#grupo-redes-sociales {
+    align-self: flex-start;
+}
+
+footer a {
+    width: 57px;
+    height: 58px;
+    /* border: 1px solid red; */
+    display: inline-block;
+}
+
+#footerT {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+#footerF {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -57px;
+    background-position-y: 0;
+}
+
+#footerG {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -114px;
+    background-position-y: 0;
+}
+
+#footerI {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -171px;
+    background-position-y: 0;
+}
+
+#footerV {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -228px;
+    background-position-y: 0;
+}
+
+#footerY {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -285px;
+    background-position-y: 0;
+}
+
+
+/* --------------------------------------------------------- */
+
+#footerT:hover {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: 0;
+    background-position-y: -58px;
+}
+
+#footerF:hover {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -57px;
+    background-position-y: -58px;
+}
+
+#footerG:hover {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -114px;
+    background-position-y: -58px;
+}
+
+#footerI:hover {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -171px;
+    background-position-y: -58px;
+}
+
+#footerV:hover {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -228px;
+    background-position-y: -58px;
+}
+
+#footerY:hover {
+    background-image: url(../imgs/redes-sociales.png);
+    background-position-x: -285px;
+    background-position-y: -58px;
+}

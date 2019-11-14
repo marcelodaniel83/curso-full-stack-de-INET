@@ -1,0 +1,54 @@
+@media print {
+    ul {
+        list-style: none;
+    }
+}
+
+body {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: orange;
+        color: brown;
+        font-size: 20px;
+    }
+}
+
+.contenedor-botones {
+    background-color: #777;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+button {
+    width: 25%;
+    height: 30px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 492px) {
+    body {
+        background-color: magenta;
+        color: white;
+        font-size: 15px;
+    }
+
+    .contenedor-botones {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 75%;
+    }
+    
+}
+

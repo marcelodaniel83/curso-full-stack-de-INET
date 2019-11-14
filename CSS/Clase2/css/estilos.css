@@ -1,0 +1,91 @@
+body {
+    margin : 0;
+    height: 2000px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#caja1, #caja2 {
+    /*border: 1px solid black;*/
+}
+
+#caja1 {
+    width: 40%;
+    height: 400px;
+    overflow: auto;
+    padding: 10px; /* TRBL*/
+    padding: 10px 20px; /* TB LR */
+    padding: 10px 20px 40px; /* T LR B */
+    padding: 10px 20px 40px 60px; /* T R B L */
+    padding-left: 5px;
+
+    margin: 10px 20px 40px; /* T LR B */
+
+    border-style: dotted;
+    border-width: 5px;
+    border-color:  #ff0000;
+
+    border: 3px dashed blue;
+    border-left: 5px dotted magenta;
+
+    background-image: url('../imgs/linux.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    background-attachment: scroll;
+
+    background-color: pink;
+
+    background: cyan url('../imgs/android.png') no-repeat center center;
+
+    background-size: contain;
+
+    float: right;
+}
+
+#caja2 {
+    width: 30%;
+    height: 400px;
+    margin: 10px;
+    padding: 10px;
+
+    border-width: 1vh 0.3em;
+    border-color: green blue red magenta;
+    border-style: dotted double dashed outset;
+
+    background: cornflowerblue url('../imgs/linux.png');
+
+    float: left;
+
+}
+
+#caja3 {
+    width: 50%;
+    height: 200px;
+    background-color: green;
+    color: white;
+    float: right;    
+}
+
+#caja4 {
+    width: 10%;
+    height: 100px;
+    background-color: magenta;
+    color: white;
+    clear: both;
+    /* float: right;  */   
+}
+
+input {
+    margin: 10px;
+    /* outline-width: 0; */
+    outline-color: red;
+    /* outline-style: none; */
+}
+/*
+input:focus {
+    outline-style: dotted;
+}
+*/
