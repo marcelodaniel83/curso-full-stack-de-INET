@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ordenamiento de los valores de un array</title>
+</head>
+<body>
+
+    <script>
+        function obtenerNumeroRandom1al100() {
+            return parseInt(Math.random()*100) + 1
+        }
+
+        function ordenar(num, descendente) {
+            for(var i=0; i<num.length; i++) {
+                for(var j=0; j<(num.length-1); j++) {
+                    var condicion = descendente? (num[j] < num[j+1]) : (num[j] > num[j+1])
+                    if(condicion) {
+                        var aux = num[j+1]
+                        num[j+1] = num[j]
+                        num[j] = aux
+                    }
+                }
+            }
+        }
+
+        numeros = []
+        for(var i=0; i<100; i++) {
+            numeros[i] = obtenerNumeroRandom1al100()
+        }
+
+        console.log(numeros)
+        ordenar(numeros, !true)
+        console.log(numeros)
+        
+    </script>
+
+</body>
+</html>

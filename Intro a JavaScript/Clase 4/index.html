@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+</head>
+<body>
+    
+    <!-- **************** EVENTOS DESDE HTML ******************* -->
+    <button onclick="console.log('Me hicieron Click!')">Haceme Click!</button>
+    <br>
+    <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+    <br>
+    <p onclick="mostrarMensajePersonalizado('click en párrafo!')">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, dicta ratione! Alias ea tempore unde deleniti eius possimus saepe sunt repellat nostrum! Nihil eum impedit repellat totam magnam consequatur aperiam.
+    </p>
+
+    <!-- **************** EVENTOS DESDE JAVASCRIPT ******************* -->
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <button id="contador">Contador</button>
+
+
+    <script>
+    
+        var alumno1 = {
+            nombre: 'Juan',
+            apellido: 'Martinez',
+            edad: 24,
+            saludo: function() {
+                console.log('Hola!')
+            }
+        }
+
+        console.log('-----------------------')
+        console.log(alumno1.nombre)
+        alumno1.nombre = 'Diego'
+        console.log(alumno1['nombre'])
+
+        console.log(alumno1.apellido)
+        console.log(alumno1.edad)
+        alumno1.saludo()
+        console.log('-----------------------')
+
+        var alumnos = [
+            {nombre: 'Juan', apellido: 'Gimenez', edad: 23},
+            {nombre: 'Pedro', apellido: 'Gomez', edad: 21},
+            {nombre: 'Ana', apellido: 'Mei', edad: 34},
+            {nombre: 'Lucía', apellido: 'Picos', edad: 29}
+        ]
+
+        for(var alumno=0; alumno<alumnos.length; alumno++) {
+            console.log(
+                alumnos[alumno].nombre,
+                alumnos[alumno]['apellido'],
+                alumnos[alumno].edad
+            )
+        }
+        console.log('------------------------------')
+        var obj1 = {
+            nombre: 'Juan',
+            apellido: 'Mei',
+            edad: 32
+        }
+        console.log(typeof obj1)
+        console.log(obj1)
+
+        var arr1 = ['Juan','Mei',32]
+        console.log(typeof arr1)
+        console.log(arr1)
+        console.log('---------------------------')
+
+
+        var mensaje = "Hola mundo"
+        console.log(mensaje)
+        console.log(mensaje.split(''))
+        console.log(mensaje.split('').join('*'))
+
+        console.log('---------------------------')
+
+
+        // ---------- EVENTOS ASOCIADOS A FUNCIONES ----------
+        var elementoContador = 'h2'
+        var contador = 0
+
+        function contar() {
+            contador++
+            console.log(contador)
+            /* representarContador(contador,elementoContador) */
+            representarTodosLosContadores()
+        }
+
+        function representarContador(cont,elemento) {
+            document.querySelector(elemento).innerText = cont
+        }
+
+        function representarTodosLosContadores() {
+            representarContador(contador,'h1')
+            representarContador(contador,'h2')
+            representarContador(contador,'h3')
+        }
+
+        representarTodosLosContadores()
+
+        // ---- CONFIGURACIÖN DEL EVENTO A TRAVÉS DE JS
+        /* var refBoton = document.getElementById('contador')
+        refBoton.onclick = contar */
+        document.getElementById('contador').onclick = contar
+
+
+        // ---------- DECLARACIONES DE FUNCIONES ----------
+        function mostrarMensaje() {
+            console.log('Soy un mensaje')
+        }
+
+        function mostrarMensajePersonalizado(mensaje) {
+            console.log(mensaje)
+        }
+
+        function obtenerRandom() {
+            return Math.random().toFixed(2)
+        }
+
+        function suma(a,b) {
+            return a + b
+        }
+        // -----------------------------------------------
+
+        // ------------ EJECUCIÓN DE FUNCIONES -----------
+        mostrarMensaje()
+        mostrarMensajePersonalizado('Mi mensaje!')
+        for(var i=0; i<3; i++) {
+            console.log(obtenerRandom())
+        }
+        console.log(suma(5,8))
+        // -----------------------------------------------
+
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1>Texto a cambiar por Jquery...</h1>
+
+    <button id="cambiar">Cambiar</button>
+    <hr>
+
+    <select>
+        <option value="OPCION 1">UNO</option>
+        <option value="OPCION 2">DOS</option>
+        <option value="OPCION 3">TRES</option>
+    </select>
+    <hr>
+
+    <button id="cambiar-imagen">Cambiar Imágen</button>
+    <img src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-256.png" width="100" alt="">
+    <hr>
+
+    <button id="ocultar">Ocultar</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid expedita nisi odio, laboriosam dicta eum veniam cumque tenetur obcaecati ullam dolorem illum ab mollitia maxime. Eius veritatis consequatur quaerat doloribus!
+    </p>
+
+
+    <script>
+        $('#cambiar').click(cambiar)
+        function cambiar() {
+            // $('h1').text('Lo cambió JQuery!!!!')
+            console.log($('h1').text())
+            $('h1').html('<i>Lo cambió JQuery!!!!</i>')
+            $('h1').css('color','red')
+            $('#cambiar').text('Cambiado')
+
+            setTimeout(ocultarBotonCambiar,2000)
+        }
+    
+        function ocultarBotonCambiar() {
+            //$('#cambiar').hide()
+            $('#cambiar').fadeOut(2000)
+        }
+
+        var ocultar = false
+        $('#ocultar').click(ocultarMostrar)
+        function ocultarMostrar() {
+            ocultar = !ocultar
+            console.log('ocultar')
+            //ocultar? $('p').hide() : $('p').show()
+            ocultar? $('p').fadeOut(1000) : $('p').fadeIn(1000)
+        }
+
+        $('select').change(mostrarValorSelect)
+        function mostrarValorSelect() {
+            var valor = $('select').val()
+            alert(valor)
+        }
+
+        $('#cambiar-imagen').click(cambiarImagen)
+        var selImg = false        
+        function cambiarImagen() {
+            selImg = !selImg            
+            $('img').attr('src', selImg? 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-256.png' : 
+            "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-256.png"
+            )
+        }
+
+    </script>
+
+</body>
+</html>

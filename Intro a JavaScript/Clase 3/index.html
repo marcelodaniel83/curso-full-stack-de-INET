@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 3 JS - While / Do While / For</title>
+</head>
+
+<body>
+
+    <script>
+
+        var suma
+        var nota
+        var cantNotas
+        var resultado
+        do {
+            suma = 0
+            nota
+            cantNotas = 0
+            resultado = ''
+            do {
+                nota = Number(prompt('Ingrese la nota'))
+                //console.log(nota)
+                if(!(nota >= 0 && nota <= 10)) break;
+                suma += nota
+                cantNotas++
+            }
+            while(true)
+
+            if(cantNotas > 0) {
+                resultado = 'El promedio es ' + suma/cantNotas + '.La cantidad de notas es ' + cantNotas
+            }
+            else resultado = 'La cantidad de notas es 0'
+        }
+        while(confirm(resultado + '\nDesea continuar?'))
+        /*
+        console.log('--- WHILE ---')
+        var numero = 0
+        while (numero <= 10) {
+            console.log(numero)
+            numero++
+        }
+        console.log('-------------')
+
+        console.log('--- DO WHILE ---')
+        var numero = 0
+        do {
+            console.log(numero)
+            numero++
+        }
+        while (numero <= 10)
+        console.log('----------------')
+
+
+        console.log('--- FOR ---')
+        for(var numero=0; numero<=10; numero++) {
+            if(numero == 5) continue;
+            console.log(numero)
+        }
+        console.log('-----------')
+        */
+
+
+    </script>
+
+</body>
+
+</html>

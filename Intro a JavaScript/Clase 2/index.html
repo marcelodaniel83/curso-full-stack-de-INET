@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 2 - JS</title>
+</head>
+
+<body>
+
+    <h1 id="titulo" class="titulo"><i>Soy un titulo h1!</i></h1>
+
+    <script>
+
+        console.log('--- INICIO ---')
+        /* var respuesta = confirm('Desea Ingresar?')
+        if(respuesta) {
+            console.log('Bienvenido!')
+        }
+        else {
+            console.log('Lo esperamos la próxima vez')
+        } */
+
+        /*
+        var edad = prompt('Ingrese su edad?')
+        console.log(typeof edad)
+        if(edad >= 18) {
+            console.log('Ud. es mayor de edad!')
+            var nombre = prompt('Ingrese su nombre')
+            if(nombre === 'Pedro') {
+            //if(prompt('Ingrese su nombre') == 'Pedro') {
+                console.log('Bienvenido Pedro!')
+            }
+
+            //if(edad <= 35 ) {
+            //    console.log('Ud. es joven!')
+            //}
+        }
+        else {
+            console.log('Ud. es menor de edad!')
+        }
+        */
+        /*
+        var edad = prompt('Ingrese su edad?')
+
+        if(edad >= 0 && edad < 4) {
+            console.log('Ud es un bebé')
+        }
+        else if(edad >= 4 && edad < 12) {
+            console.log('Ud es un niño')
+        }
+        else if(edad >= 12 && edad < 18) {
+            console.log('Ud es un adolescente')
+        }
+        else if(edad >= 18 && edad < 30) {
+            console.log('Ud es un joven')
+        }
+        else if(edad >= 30 && edad < 70) {
+            console.log('Ud es un adulto')
+        }
+        else if(edad >= 70 && edad < 120){
+            console.log('Ud es un anciano')
+        }
+        else {
+            console.log('Ud NO es un humano')
+        }
+        console.log('--- FIN ---')
+        */
+
+
+        var FyH = new Date()
+        var numeroDeDia = FyH.getDay()
+        //numeroDeDia = 5
+        console.log('Nro. de día', numeroDeDia)
+
+        document.write('<h1>' + FyH.toLocaleString() + '</h1>')
+        document.write('<p>Nro. de día: ' + numeroDeDia + '</p>')
+
+        var nombreDelDia = ''
+        switch (numeroDeDia) {
+            case 0:
+                nombreDelDia = 'Domingo'
+                break
+            
+            case 1:
+            case 2:
+            case 3:
+                nombreDelDia = 'Lunes ó Martes ó Miercoles'
+                break
+/*             case 1:
+                nombreDelDia = 'Lunes'
+                break
+
+            case 2:
+                nombreDelDia = 'Martes'
+                break
+
+            case 3:
+                nombreDelDia = 'Miércoles'
+                break
+ */
+            case 4:
+                nombreDelDia = 'Jueves'
+                break
+
+            case 5:
+                nombreDelDia = 'Viernes'
+                break
+
+            case 6:
+                nombreDelDia = 'Sábado'
+                break
+
+            default:
+                nombreDelDia = 'DESCONOCIDO'
+                break
+        }
+        document.write('<h3>Nombre del día: ' + nombreDelDia + '</h3>')
+
+        /* var refTitulo = document.getElementById('titulo') */
+        /* var refTitulo = document.querySelector('#titulo') */
+        /* var refTitulo = document.querySelector('h1') */
+        var refTitulo = document.querySelector('.titulo')
+        refTitulo.innerHTML = '<u>Hola!!!!</u>'
+        refTitulo.style.color = 'cyan'
+        refTitulo.style.backgroundColor = 'black'
+
+
+    </script>
+
+</body>
+
+</html>

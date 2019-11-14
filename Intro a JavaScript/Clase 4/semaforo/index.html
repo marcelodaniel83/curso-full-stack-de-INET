@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Semáforo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .luz-semaforo {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: 5px auto;
+        }
+        .caja-semaforo {
+            width: 75px;
+            background-color: #333;
+            border: 2px solid black;
+            border-radius: 30px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .centrar {
+            text-align: center;
+            margin-top : 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="caja-semaforo">
+        <div class="luz-semaforo" id="red"></div>
+        <div class="luz-semaforo" id="yellow"></div>
+        <div class="luz-semaforo" id="green"></div>
+    </div>
+
+    <div class="centrar">
+        <button>Cambiar</button>
+    </div>
+
+    <script>
+        
+        function cambiarLuzSemaforo(id, prender) {
+            var color = 'gray'
+            if(prender) color = id
+            /* document.getElementById(id).style.backgroundColor = color */
+            document.querySelector('#'+id).style.backgroundColor = color
+        }
+    
+        var estado = 0
+        function cambiarEstadoSemaforo() {
+            console.log(estado)
+
+            switch(estado) {
+                //ROJO
+                case 0:
+                    cambiarLuzSemaforo('red', !false)
+                    cambiarLuzSemaforo('yellow', false)
+                    cambiarLuzSemaforo('green', false)
+                    break
+                
+                //ROJO-AMARILLO
+                case 1:
+                    cambiarLuzSemaforo('red', !false)
+                    cambiarLuzSemaforo('yellow', !false)
+                    cambiarLuzSemaforo('green', false)
+                    break
+
+                //VERDE
+                case 2:
+                    cambiarLuzSemaforo('red', false)
+                    cambiarLuzSemaforo('yellow', false)
+                    cambiarLuzSemaforo('green', !false)
+                    break
+
+                //AMARILLO
+                case 3:
+                    cambiarLuzSemaforo('red', false)
+                    cambiarLuzSemaforo('yellow', !false)
+                    cambiarLuzSemaforo('green', false)
+                    break
+
+                default:
+                    cambiarLuzSemaforo('red', false)
+                    cambiarLuzSemaforo('yellow', false)
+                    cambiarLuzSemaforo('green', false)
+                    break
+            }
+
+            estado++;
+            if(estado > 3) estado = 0
+        }
+        document.querySelector('button').onclick = cambiarEstadoSemaforo
+
+        cambiarLuzSemaforo('red', false)
+        cambiarLuzSemaforo('yellow', false)
+        cambiarLuzSemaforo('green', false)
+
+        setInterval(cambiarEstadoSemaforo, 2000)
+
+    
+    </script>
+
+</body>
+</html>

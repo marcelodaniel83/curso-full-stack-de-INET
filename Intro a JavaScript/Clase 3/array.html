@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    
+    <script>
+        var diasDeLaSemana = [
+            'Domingo',
+            'Lunes',
+            'Martes',
+            'Miércoles',
+            'Jueves',
+            'Viernes',
+            'Sábado'
+        ]
+        console.log(diasDeLaSemana)
+        for(var numDia=0; numDia<diasDeLaSemana.length; numDia++ ) {
+            console.log(diasDeLaSemana[numDia])
+        }
+
+        /*
+        console.log('------------------------')
+        var FyH = new Date()
+        var numDiaSemana = FyH.getDay()
+        var nombreDiaSemana = diasDeLaSemana[numDiaSemana]
+        console.log('Hoy es ' + nombreDiaSemana)
+        console.log('------------------------')
+        */
+        console.log('------------------------')
+        console.log('Hoy es ' + diasDeLaSemana[new Date().getDay()])
+        console.log('------------------------')
+
+
+        var numeros = [11,22,33,44,55,66,77]
+        for(var i=0; i<numeros.length; i++) {
+            console.log(numeros[i])
+        }
+        console.log('------------------------')
+        for(var i=numeros.length-1; i>=0; i--) {
+            console.log(numeros[i])
+        }
+
+
+    </script>
+
+</body>
+</html>
