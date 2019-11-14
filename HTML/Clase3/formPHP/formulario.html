@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Form</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<style>
+			body {
+				background-color: #888; 
+				font-family: 'Roboto', sans-serif;
+				box-shadow: 2px 2px 5px #555;
+				text-shadow: 2px 2px 5px #555;
+			}
+			.titulo {
+				text-align: center;
+				color: white;
+				font-size: 25pt; 
+				color: #ffbe76;
+			}
+			.contenedor-ppal {
+				width: 50%;
+				margin: 10px auto;
+				background-color: #2980b9;
+				border : 1px dashed white;
+				border-radius: 10px;
+			}
+			.contenedor-input {
+				width: 80%;
+				margin: 0 auto;
+				text-align: center;
+				padding: 3px;
+			}
+			.contenedor-boton {
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 20px;
+			}
+			label {
+				display: block;
+				color: #badc58;
+				padding: 5px;
+			}
+			input {
+				width: 70%;
+				height: 30px;
+				border: none;
+				border-radius: 5px;
+				background-color: #95afc0;
+				font-size: 15pt;
+				font-weight: bold;
+				padding: 2px 0 2px 5px;
+				overflow-y: hidden;
+			}
+			input[type=email] {
+				/* font-size: 10pt; */
+			}
+			input[type=submit] {
+				padding: 10px;
+				height: 50px;
+				width: 90%;
+				background-color: #6ab04c;
+				font-size: 20pt;
+				color: #130f40;
+				text-shadow: 2px 2px 5px #555;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="contenedor-ppal">
+			<div class="titulo">
+				<p>Ingrese Sus Datos</p>
+			</div>
+			<form action="proc.php" method="post">
+				
+				<div class="contenedor-input">
+					<label for="nombre">Ingrese el nombre</label>
+					<input type="text" name="nombre" id="nombre" autocomplete="off" required>
+				</div>
+
+				<div class="contenedor-input">
+					<label for="apellido">Ingrese el apellido</label>
+					<input type="text" name="apellido" id="apellido" autocomplete="off" required>
+				</div>
+				
+				<div class="contenedor-input">
+					<label for="password">Ingrese la contraseña</label>
+					<input type="password" name="password" id="password" autocomplete="off" required>
+				</div>
+				
+				<div class="contenedor-input">
+					<label for="email">Ingrese el mail</label>
+					<input type="email" name="email" id="email" autocomplete="off" required>
+				</div>
+				
+				<div class="contenedor-input">
+					<label for="edad">Ingrese la edad</label>
+					<input type="number" name="edad" id="edad" min="0" autocomplete="off" required>
+				</div>
+				
+				<div class="contenedor-input">
+					<label for="ncel">Ingrese el numero de telefono</label>
+					<input type="number" name="ncel" id="ncel" autocomplete="off" required>
+				</div>
+
+				<div class="contenedor-boton">
+					<input type="submit" name="submit" value="Login">
+				</div>
+
+			</form>
+		</div>		
+	</body>
+</html>

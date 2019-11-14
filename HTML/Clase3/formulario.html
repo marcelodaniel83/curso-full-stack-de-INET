@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+</head>
+<body>
+	
+	<!-- file:///D:/CursoHTML-Clase3/formulario.html?nombre=D&apellido=S&edad=5 -->
+
+	<form action="https://postman-echo.com/post" method="post">
+		Nombre<br>
+		<input type="text" value="Daniel" placeholder="Ingrese su nombre" name="nombre"><br>
+		
+		Apellido <br>
+		<input type="text" name="apellido"><br>
+
+		Edad <br>
+		<input type="number" name="edad"><br>
+
+		Email <br>
+		<input type="email" name="email"><br>
+
+		Contraseña <br>
+		<input type="password" name="password" required><br><br>
+
+		Género <br>
+		<input type="radio" name="genero" value="masculino" checked> MASCULINO<br>
+		<input type="radio" name="genero" value="femenino"> FEMENINO<br>
+		<input type="radio" name="genero" value="otros"> OTROS<br>
+		<br>
+
+		Estudios <br>
+		<input type="checkbox" name="primaria"> PRIMARIA <br>
+		<input type="checkbox" name="secundaria"> SECUNDARIA <br>
+		<input type="checkbox" name="terciaria"> TERCIARIA <br>
+		<input type="checkbox" name="ninguno" checked> NINGUNO <br>
+		<br>
+		<br>
+
+		Vehículo <br>
+		<select name="vehiculo">
+			<option value="ford">FORD</option>
+			<option value="fiat">FIAT</option>
+			<option value="vw" selected>VW</option>
+		</select>
+		<br>
+		<br>
+
+		Comentarios <br>
+		<textarea name="comentarios" cols="30" rows="10"></textarea>
+		<br>
+		<br>
+
+		Nivel <br>
+		<input type="range" name="nivel">
+		<br>
+		<br>
+
+		Color <br>
+		<input type="color" name="color">
+		<br>
+		<br>
+
+		Fecha <br>
+		<input type="date" name="fecha">
+		<br>
+		<br>
+
+
+		<br>
+		<input type="submit" value="Enviar">
+
+
+
+	</form>
+
+
+</body>
+</html>
