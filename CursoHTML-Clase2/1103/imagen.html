@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Imágen</title>
+	<link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road&display=swap" rel="stylesheet">
+
+	<style>
+
+		body {
+			background: url('../imgs/fondo.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		h1 {
+			font-family: 'Mansalva', cursive;
+			font-size: 80px;
+			color: blue;
+			text-shadow: 5px 5px 5px cyan;
+		}
+
+		h2 {
+			font-family: 'Turret Road', cursive;
+			font-size: 60px;
+		}
+
+		li {
+			display: inline-block;
+		}
+
+		img {
+			margin: 10px;
+			border-radius: 50px;
+			box-shadow: 5px 5px 5px yellow;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<!-- ul>li*3>a>img -->
+	<h1>Menú de enlaces con Imágenes</h1>
+	<ul>
+		<li>
+			<a href="http://www.instagram.com">
+				<img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-256.png" height="200" alt="logo de instagram">
+			</a>
+		</li>
+
+		<li><a href="http://www.facebook.com"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_facebook-256.png" height="200" alt="logo de facebook"></a></li>
+
+		<li><a href="http://www.whatsapp.com"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo-whatsapp-256.png" height="200" alt="logo de whatsapp"></a></li>
+	</ul>
+
+	
+	<br>
+	<h1>Elemento de Imágen</h1>
+
+	<h2>Destino absoluto</h2>
+	<img src="https://www.dzoom.org.es/wp-content/uploads/2010/07/horizonte-recto-810x540.jpg" alt="foto de un paisaje (ruta absoluta)">
+	<img src="https://mott.pe/noticias/wp-content/uploads/2019/03/los-50-paisajes-maravillosos-del-mundo-para-tomar-fotos.jpg" alt="foto de otro paisaje" width="1200" height="300">
+
+	<h2>Destino relativo</h2>
+	<img src="../imgs/horizonte-recto-810x540.jpg" alt="foto de un paisaje (ruta relativa)">
+
+</body>
+</html>
